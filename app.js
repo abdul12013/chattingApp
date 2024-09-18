@@ -119,7 +119,7 @@ app.post('/delete-message', async (req, res) => {
     res.json({ success: false, msg: 'An error occurred while deleting the message.' });
   }
 });
-app.get("/logout", (req, res) => {
+app.get("/user/logout", (req, res) => {
     res.clearCookie("token")
     res.redirect("/")
 })
