@@ -51,11 +51,7 @@ router.get("/registerPage",(req,res)=>{
   router.get("/chat",islogging, async(req,res)=>{
    user=await usermodel.findOne({email:req.user.email})
   alluser=await usermodel.find({email:{$nin:[req.user.email]}})
-  console.log(alluser)
-//    user.forEach((e)=>{
-//     console.log(e)
-//    })
-   
+  console.log(alluser)   
     res.render("chat",{user:user,alluser:alluser})
 })
 router.post("/Registor", upload.single("file"), async (req, res) => {
@@ -211,7 +207,7 @@ router.post("/login", async (req, res) => {
             let token = jwtTocken(user)
             res.cookie("token", token)
           
-           res.redirect("/chat")
+           res.redirect("/user/chat")
         }
         else {
             res.json("wrong password")
