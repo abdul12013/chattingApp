@@ -211,7 +211,7 @@ router.post("/login", async (req, res) => {
             let token = jwtTocken(user)
             res.cookie("token", token)
           
-           res.redirect("/user/chat")
+           res.redirect("/chat")
         }
         else {
             res.json("wrong password")
