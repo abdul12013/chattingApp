@@ -19,7 +19,7 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname, "public")));
 app.use(cookieParser());
 app.set("view engine", "ejs");
-app.use( usersRouters);
+app.use( "/user",usersRouters);
 
 const { Server } = require("socket.io");
 
