@@ -149,7 +149,7 @@ else{
                           };
                       
                           await trans.sendMail(mailOptions);
-                          res.redirect("/")
+                          res.redirect("/user/verifyotp")
 
                     }
                     catch (err) {
