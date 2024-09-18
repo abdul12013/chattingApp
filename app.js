@@ -4,7 +4,7 @@ const cookieParser = require("cookie-parser");
 const messageModel = require("./models/messageModel");
 const usersModel = require("./models/usermodel");
 const cors = require("cors");
-const bcrypt = require("bcrypt");
+
 const jwt = require("jsonwebtoken");
 const path = require("path");
 const mongooseConnection = require("./config/mongoose-connection");
