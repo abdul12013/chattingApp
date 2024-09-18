@@ -233,10 +233,7 @@ router.post("/login", async (req, res) => {
 
 
 
-router.get("/logout", (req, res) => {
-    res.clearCookie("token")
-    res.redirect("/")
-})
+
 
 // router.post("/savechat", async (req, res) => {
 //     try {
